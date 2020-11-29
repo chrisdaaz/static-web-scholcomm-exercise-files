@@ -1,0 +1,27 @@
+<div class="box">
+  <h2 class="is-size-2 my-6">{{ .Title }}</h2>
+    <div class="level">
+      <div class="level-left">
+        <h3>Authors: {{ range .Params.authors }}{{ . }} {{ end }}</h3>
+      </div>
+      <div class="level-right">{{ if .Params.doi }}
+        <p class="has-text-weight-bold">DOI: <a href="https://doi.org/{{ .Params.doi }}" target="_blank">{{ .Params.doi }}</a></p>{{ end }}
+      </div>
+    </div>
+    <div class="level">
+        <div class="level-left">
+            <span class="is-italic">{{ .Site.Title }}, {{ .Site.Params.publisher }}</span>
+        </div>
+        <div class="level-right">
+            <a class="mb-06" href="https://creativecommons.org/licenses/{{ .Params.license }}/4.0/legalcode" target="_blank">
+              <img src="https://licensebuttons.net/l/{{ .Params.license }}/4.0/88x31.png" alt="Creative Commons License: {{ .Params.license }}">
+            </a>
+        </div>
+    </div>
+    <h3>Abstract</h3>
+    <p>{{ .Params.abstract }}</p>
+    <p class="button is-large is-ghost"><a href="#" itemprop="url">Download</a></p>   
+    <p>
+      <small class="is-italic">Note: This document contains fake names and text generatored by <a href="http://officeipsum.com/" target="_blank">Office Ipsum</a>.</small>
+    </p>
+</div>  

@@ -1,0 +1,11 @@
+<section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <figure>
+          <a href="{{ .Params.image_src }}" title="">
+            <img width="1024" alt="{{ with .Params.image_alt }}{{ . }}{{ else }}{{ .Params.Abstract }}{{ end }}" src="{{ .Params.image_src }}">
+          </a>
+        </figure>
+      </div>
+    </div>
+</section>

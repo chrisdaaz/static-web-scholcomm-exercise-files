@@ -1,0 +1,34 @@
+# This is the primary configuration file for your website. 
+# Each value sets a site-wide variable that can be used in our HTML templates (i.e. the files within the `/layouts/` folder)
+title: Conference Proceedings 
+baseURL: /
+languageCode: "en-us"
+SectionPagesMenu: main
+
+params:
+  # Visit https://jenil.github.io/bulmaswatch/ to preview possible theme variants. The options include: cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti
+  theme_variant: default
+  description:  
+  institution_name: 
+  publisher: 
+  gs_metadata: false
+
+menu:
+  main:
+  - name: Papers
+    weight: 1
+    identifier: papers
+    url: "/papers/"
+  - name: Posters
+    weight: 2
+    identifier: posters
+    url: "/posters/"
+  #- name: Visualization
+  #  weight: 3
+  #  identifier: visualizations
+  #  url: "/visualizations/"
+
+markup: 
+  goldmark: 
+    renderer: 
+      unsafe: true

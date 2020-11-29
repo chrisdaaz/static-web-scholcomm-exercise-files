@@ -1,0 +1,17 @@
+<div class="box is-full-desktop" itemscope itemtype="http://schema.org/ScholarlyArticle">
+    <h1 class="title">
+        <a href="{{ .Permalink }}" itemprop="headline">{{ .Title }}</a>
+    </h1>
+    <h3 class="has-text-weight-bold mb-6">
+        Authors:   
+        {{ range .Params.authors }}
+        {{ . }}
+        {{ end }}
+    </h3>
+    <br>
+    <p class="content" itemprop="description">
+        {{ .Params.abstract }}
+    </p>
+    <a class="button is-fullwidth" href="{{ .RelPermalink }}" itemprop="url">View</a>
+</div>
+<hr>

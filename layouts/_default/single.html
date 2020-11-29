@@ -1,0 +1,30 @@
+{{ define "title" -}}
+  {{ .Title }} | {{ .Site.Title }}
+{{- end }}
+
+{{ define "header" }} {{ partial "menu" . }} {{ end }} 
+
+{{ define "main" }}
+
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+                  {{ partial "page-metadata.html" . }}
+                  <div class="is-large">
+                    {{ .Content}}
+                  </div>
+                  {{ if or (eq .Section "visualizations") (eq .Section "posters") }}
+                    {{ partial "image.html" . }}
+                  {{ end }}
+                </div>
+                <br>
+            </div>
+        </section>
+    </div>
+</div>
+{{ end }} 
+{{ define "footer" }} 
+  {{ partial "footer" . }} 
+{{ end }}

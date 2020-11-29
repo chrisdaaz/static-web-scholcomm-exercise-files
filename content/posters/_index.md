@@ -1,0 +1,4 @@
+---
+title: Posters
+layout: list
+---
