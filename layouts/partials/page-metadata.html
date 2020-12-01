@@ -13,9 +13,13 @@
             <span class="is-italic">{{ .Site.Title }}, {{ .Site.Params.publisher }}</span>
         </div>
         <div class="level-right">
+          {{ if eq .Params.license "public domain" }}
+            <p>Rights: <a class="mb-06" href="https://rightsstatements.org/page/NoC-US/1.0/" target="_blank">No copyright - United States</a></p>
+          {{ else }}
             <a class="mb-06" href="https://creativecommons.org/licenses/{{ .Params.license }}/4.0/legalcode" target="_blank">
               <img src="https://licensebuttons.net/l/{{ .Params.license }}/4.0/88x31.png" alt="Creative Commons License: {{ .Params.license }}">
             </a>
+          {{ end }}
         </div>
     </div>
     <h3>Abstract</h3>
