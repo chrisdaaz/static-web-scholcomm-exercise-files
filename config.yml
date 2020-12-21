@@ -9,7 +9,7 @@ params:
   # Visit https://jenil.github.io/bulmaswatch/ to preview possible theme variants. The options include: cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti
   theme_variant: default
   description:  
-  institution_name: 
+  institution: 
   publisher: 
   gs_metadata: false
 
